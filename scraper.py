@@ -11,7 +11,7 @@ source = requests.get('https://www.discogs.com/artist/40029-Linkin-Park').text
 soup =  BeautifulSoup(source, 'lxml')
 
 albums = soup.find_all(class_="title")
-index = [0,4,5,8,11,12]
+index = [0,4,5,7,8,11,12]
 a = []
 for i in index:
 	a.append(albums[i])
