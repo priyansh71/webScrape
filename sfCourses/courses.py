@@ -15,11 +15,10 @@ for ul in uls:
 	items = ul.find_all('li')
 	for item in items:
 		if item.a.text[0] == 'C':
-			title = item.a.text
 			avail = "No"
 		else:
-			title = item.a.text[2:0]
 			avail = "Yes"
+		title = item.a.text
 		link = item.a['href']
 		csv_writer.writerow([title, link, avail])
 
