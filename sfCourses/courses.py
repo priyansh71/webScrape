@@ -18,7 +18,7 @@ for ul in uls:
 			title = item.a.text
 			avail = "No"
 		else:
-			title = item.a.text[1:-1]
+			title = item.a.text[2:0]
 			avail = "Yes"
 		link = item.a['href']
 		csv_writer.writerow([title, link, avail])
